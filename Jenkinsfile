@@ -10,6 +10,7 @@ pipeline {
             steps{
                 sh "docker build . -t node-app-test-new"
             }
+            
         }
         stage("Push to Docker Hub"){
             steps{
