@@ -26,6 +26,6 @@ jobs:
 
     - name: Deploy to Server
       run: |
-        scp -r ./dist/* root@178.128.197.8:/home/admin
+        scp -r ./dist/* root@178.128.197.8:/home
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
