@@ -26,8 +26,4 @@ jobs:
     - name: Install Dependencies
       run: pwd
 
-    # - name: Deploy to Server
-    #   run: |
-    #     scp Dockerfile root@64.226.124.69:/home/ali
-    #   env:
-    #     SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+
