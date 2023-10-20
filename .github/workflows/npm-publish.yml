@@ -7,7 +7,9 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on:
+      - self-hosted
+      - label-1
 
     steps:
     - name: Checkout code
@@ -23,6 +25,6 @@ jobs:
 
     - name: Deploy to Server
       run: |
-        scp -r ./dist/* root@178.128.197.8:/home
+        scp root@178.128.197.8:/home
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
