@@ -25,6 +25,6 @@ jobs:
 
     - name: Deploy to Server
       run: |
-        scp root@178.128.197.8:/home
+        scp -i Dockerfile root@64.226.124.69:/home/ali
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
