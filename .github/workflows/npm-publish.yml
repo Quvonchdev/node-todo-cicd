@@ -24,6 +24,9 @@ jobs:
       run: npm install
 
     - name: Install Dependencies
-      run: node app.js
+      run: npm install pm2 -g
+
+    - name: Install Dependencies
+      run: pm2 start app.js
 
 
